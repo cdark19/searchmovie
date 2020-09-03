@@ -16,7 +16,7 @@ export function apiSearchMovie(movie){
 }
 
 export function MovieInfoAPI(id){
-    const url =`http://www.omdbapi.com/?apikey=${APIkey}&i=${id}`
+    const url =`https://www.omdbapi.com/?apikey=${APIkey}&i=${id}`
 
     return fetch(url)
              .then( res=>{
