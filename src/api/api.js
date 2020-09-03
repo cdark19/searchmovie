@@ -2,7 +2,7 @@ import {APIkey} from '../config/key'
 
 export function apiSearchMovie(movie){
 
-   const url =`http://www.omdbapi.com/?apikey=${APIkey}&s=${movie}&plot=full&page=2`
+   const url =`https://www.omdbapi.com/?apikey=${APIkey}&s=${movie}&plot=full&page=2`
 
     return fetch(url)
             .then( res=> {
