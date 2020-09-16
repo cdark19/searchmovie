@@ -9,7 +9,7 @@ const Home =()=>{
     return(
         <>
          <Nav />
-         <div className="container ">
+         <div className="container">
              <FormSearch />
          </div>
          

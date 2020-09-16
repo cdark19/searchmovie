@@ -236,8 +236,7 @@ nav a{
     opacity: 0.3;
     background-size: cover;
   }
-  .notfound{
-  }
+
   .notfound-card{
   display: flex;
   justify-content: center;
@@ -291,11 +290,9 @@ star{
   margin-left:5px;
 }
 
-
 /*
 media query
 */
-
 @media screen and (max-width: 767px){
   .Details{
     padding-top:1rem;
@@ -316,7 +313,32 @@ media query
      padding-bottom:1rem;
      justify-content: center;
    }
+   .buscar{
+   }
+   .caja2{
+     padding: 0;
+   }
+}
 
+.loader{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top:15rem;
+  
+}
+
+@media screen and (max-width:550px){
+    .button-search{
+      margin-top: 1rem;
+     
+    }
+    .caja2{
+      padding: 0px;
+    }
+    .buscar{
+     
+    }
 
 }
 

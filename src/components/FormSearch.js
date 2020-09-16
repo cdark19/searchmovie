@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import { apiSearchMovie, MovieInfoAPI } from "../api/api";
+import { apiSearchMovie } from "../api/api";
 import MovieList from "./MovieList";
 
 import "../css/index.css";
@@ -9,13 +9,13 @@ const FormSearch = () => {
   const [movie, setMovie] = useState("");
   const [movieApi, setMovieApi] = useState(null);
   const [message, setMessage]= useState('')
-  const [inputState, setInputState]= useState(0)
+  
 
 
   const handlerClick = (e) => {
     e.preventDefault();
     if(movie===''){
-      setInputState(1)
+      
     }else{
     apiSearchMovie(movie)
       .then((result) => {
@@ -53,7 +53,7 @@ const FormSearch = () => {
             />
             <button
               type="submit"
-              className="btn btn-outline-info my-2 my-sm-0"
+              className="btn btn-outline-info button-search my-sm-0"
               onClick={handlerClick}
             >
               Search
