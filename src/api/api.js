@@ -1,8 +1,8 @@
 import {APIkey} from '../config/key'
 
-export function apiSearchMovie(movie){
+export function apiSearchMovie(movie, page){
 
-   const url =`https://www.omdbapi.com/?apikey=${APIkey}&s=${movie}&plot=full&page=2`
+   const url =`https://www.omdbapi.com/?apikey=${APIkey}&s=${movie}&plot=full&page=${page}`
 
     return fetch(url)
             .then( res=> {

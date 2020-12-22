@@ -8,7 +8,7 @@ const Nav =()=>{
     return(
         <nav>
         <div className="nav-center">
-           <Link to="/">CHRISDEV</Link>
+           <Link to="/" className="logo">CHRISDEV</Link>
           <ul className="nav-links">
             {
               navlinks.map( (node, index) =>{
