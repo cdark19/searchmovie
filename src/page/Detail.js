@@ -71,7 +71,7 @@ const Details = () => {
                     <dt>Indioma</dt>
                     <dd>{data.Language}</dd>
 
-                    <dt>Writer</dt>
+                    <dt>Escritores</dt>
                     <dd>{data.Writer}</dd>
 
                     <dt>Año</dt>
