@@ -65,22 +65,22 @@ const Details = () => {
                     <dt>Pais</dt>
                     <dd>{data.Country}</dd>
 
-                    <dt>Duracion</dt>
+                    <dt>Duración</dt>
                     <dd>{data.Runtime}</dd>
 
-                    <dt>Language</dt>
+                    <dt>Indioma</dt>
                     <dd>{data.Language}</dd>
 
                     <dt>Writer</dt>
                     <dd>{data.Writer}</dd>
 
-                    <dt>Year</dt>
+                    <dt>Año</dt>
                     <dd>{data.Year}</dd>
 
-                    <dt>Genre</dt>
+                    <dt>Genero</dt>
                     <dd>{data.Genre}</dd>
 
-                    <dt>Runtime</dt>
+                    <dt>Duración</dt>
                     <dd>{data.Runtime}</dd>
 
                     <dt>Ratings</dt>
