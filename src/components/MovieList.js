@@ -4,7 +4,7 @@ import Movie from '../components/Movie'
 const MovieList=({movieApi})=>{
 
     return(
-        <div className="MovieList col-12 justify-content-center">
+        <div className="MovieList">
          {
             movieApi.map( movie =>{
                 return(

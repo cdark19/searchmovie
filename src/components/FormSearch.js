@@ -20,9 +20,10 @@ const FormSearch = () => {
     apiSearchMovie(movie)
       .then((result) => {
           if(result.Error){
-            console.log(result.Error)
             setMessage(result.Error)
+            setMovie('')
             setMovieApi(null)
+            clearMessage()
           }
           else{
               if(result.Response ==='True'){
@@ -30,7 +31,6 @@ const FormSearch = () => {
                 setMessage('')
               }
           }
-        
       })
       .catch((err) => {
         console.log(err);
@@ -38,15 +38,23 @@ const FormSearch = () => {
     }
   };
 
+  const clearMessage=()=>{
+    setTimeout( ()=>{
+      setMessage('')
+
+    }, 2000)
+  }
+
   return (
     <>
-      <div className="row">
-        <div className="col-12 d-flex justify-content-center">
+      <div className="col-12 section1">
+        <div className="box-1">
+          <h1 className="title">Buscador de Peliculas</h1>
           <div className="active-pink-3 active-pink-4 mb-4 buscar">
             <input
               className="form-control mr-3"
               type="text"
-              placeholder="Search"
+              placeholder="Buscar Pelicula"
               aria-label="Search"
               value={movie}
               onChange={(e) => setMovie(([e.target.name] = e.target.value))}
@@ -56,28 +64,26 @@ const FormSearch = () => {
               className="btn btn-outline-info button-search my-sm-0"
               onClick={handlerClick}
             >
-              Search
+              Buscar
             </button>
           </div>
         </div>
-        <div className="col-12 d-flex justify-content-center">
-        
-          {
-            (!movieApi? (message? <div className="div-mensaje-error text-center"><p className="mensaje-error">{message}</p> </div>
-            : <p className="text-form text-center">use the form to search for a movie?</p>) : '' )
 
+
+        <div className="box-2">
+          {
+            (!movieApi? (message? <div className="div-mensaje-error text-center"><p className="mensaje-error">Pelicula no encontrada</p> </div>
+            : <p className="text-form text-center">use el formulario para buscar su pelicula?</p>) : '' )
           }
-       
-       
         </div> 
+
+
       </div>
 
-      <div className="row">
-        <div className="col-12 caja2">
+      <div className="col-12 section2">
              {
                  movieApi ? <MovieList movieApi={movieApi} /> : ''
-             }
-        </div>
+           }
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MovieInfoAPI } from "../api/api";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory} from "react-router-dom";
+import Nav from '../components/Nav'
 import Star from "../icons/Star";
 import Spinner from "../components/Spinner";
 import 'animate.css'
@@ -31,6 +32,8 @@ const Details = () => {
   }
 
   return (
+    <>
+    <Nav />
     <div className="container Details">
       {loading? (
         <>
@@ -38,7 +41,7 @@ const Details = () => {
             <div className="col-12 d-flex align-items-center col-lg-6 col-md-6 col-sm-12">
               <img
                 src={data.Poster}
-                className="img-block img-fluid"
+                className="img-block img-fluid imagen"
                 alt="imagen de pelicula"
               />
             </div>
@@ -98,6 +101,7 @@ const Details = () => {
       )}
 
     </div>
+    </>
   );
 };
 
