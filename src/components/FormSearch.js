@@ -11,7 +11,6 @@ const FormSearch = () => {
   const [page, setPage] = useState(1);
   const [message, setMessage] = useState("");
 
-
   const handlerClick = (e) => {
     e.preventDefault();
     if (movie === "") {
@@ -117,7 +116,7 @@ const FormSearch = () => {
         </div>
       </div>
 
-      <div className="col-12 section2">
+      <div className="col-12 section2 p-5">
         {movieApi ? (
           <p className="badge bg-primary text-wrap font-weight-bold Page p2">Pagina: {page}</p>
         ) : null}

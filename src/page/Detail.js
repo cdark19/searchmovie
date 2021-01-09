@@ -12,6 +12,8 @@ const Details = () => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+
+  console.log(data)
   useEffect(() => {
     MovieInfoAPI(id)
       .then((result) => {
