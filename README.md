@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-https://movieserach.herokuapp.com/
+https://searchmovie-nine.vercel.app/
 
 ## Available Scripts
 
